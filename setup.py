@@ -6,7 +6,7 @@ from distutils.extension import Extension
 
 setup(
     name='vaultfly',
-    version='1.0.3',
+    version='1.0.4',
     packages=['vaultfly'],
     include_package_data=True,
     url='https://github.com/chris17453/vaultfly/',
