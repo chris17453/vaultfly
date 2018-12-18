@@ -4,7 +4,7 @@ block_cipher = None
 
 
 a = Analysis(['vaultfly/cli.py'],
-             pathex=['0'],
+             pathex=['.'],
              binaries=[],
              datas=[],
              hiddenimports=[],
@@ -33,4 +33,4 @@ coll = COLLECT(exe,
                a.datas,
                strip=False,
                upx=True,
-               name='cli')
+               name='vaultfly')
