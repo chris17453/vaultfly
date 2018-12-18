@@ -8,6 +8,8 @@ pip = "==18"
 bumpversion = "*"
 twine = "*"
 pyinstaller = "*"
+cmarkgfm = "*"
+"flake8" = "*"
 
 [packages]
 pyyaml = "*"
