@@ -173,4 +173,4 @@ ansible-playbook -i inventory.ini copy.yaml
 - I will make updates as required giving time
 
 ## notes
-- make standalone will build no dependency executable in "dist/"
+- 'make standalone' will build no dependency executable in "dist/"
