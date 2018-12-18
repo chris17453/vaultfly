@@ -1,5 +1,5 @@
 # vaultfly
-Ansible vault automation for ssh login with templating and password tokens.
+Ansible login automation using ansible vault with templating and password tokens
 
 ## What
 - vaultfly is for automating ssh login when you need to use a token
