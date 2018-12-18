@@ -1,6 +1,6 @@
 (['vaultfly/cli.py'],
  ['/home/nd/repos/chris17453/vaultfly/vaultfly',
-  '/home/nd/repos/chris17453/vaultfly/0'],
+  '/home/nd/repos/chris17453/vaultfly'],
  ['codecs'],
  [],
  [],
