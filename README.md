@@ -103,7 +103,7 @@ ansible_ssh_user: chris17453
 bob: 4324
 
 # create vault on the fly with token using a template 
-# display unencrypted vault file
+# display unencrypted vault file (the display option is for convienence)
 
 [test]$ vaultfly -b  -p test.pass \
                  -c test.config \
@@ -119,3 +119,54 @@ bob: 4324
 ```
 
 
+## how to use with ansible?
+- My example
+- i created a template called tpl.vault
+```yaml
+ansible_become: true
+ansible_become_method: su
+ansible_user: 'user'
+ansible_become_exe: 'sudo  su -'
+```
+- I then made an inventory - > inventory.ini
+```yaml
+[test]
+test-box.com.internal
+test-box2.com.internal
+```
+- Next I made an ansible play -> copy.yaml
+```yaml
+---
+- hosts: test
+  gather_facts: False
+  tasks:
+  - name: Copy stuff it this is -> test-box1.com.internal
+    copy:
+      src: ../code/
+      dest: /tmp/placetoputstuff
+      owner: user
+      group: group
+    when: inventory_hostname == "test-box1.com.internal"
+
+  - name: Copy stuff if this is -> test-box2.com.internal
+    copy:
+      src: ../code/
+      dest: /tmp/placetoputstuff
+      owner: user
+      group: group
+    when: inventory_hostname == "test-box2.com.internal"
+```
+- Finally I run the play everytime i want to upload some files
+```bash
+
+#build a new vault with a token
+vaultfly -b -t -vt tpl.vault -p my-pass-file -c my-config-file
+# run the play
+ansible-playbook -i inventory.ini copy.yaml
+```
+
+## updates
+- I will make updates as required giving time
+
+## notes
+- make standalone will build no dependency executable in dist/
