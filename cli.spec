@@ -4,7 +4,7 @@ block_cipher = None
 
 
 a = Analysis(['vaultfly/cli.py'],
-             pathex=['0'],
+             pathex=['/home/nd/repos/chris17453/vaultfly'],
              binaries=[],
              datas=[],
              hiddenimports=[],
@@ -21,7 +21,7 @@ exe = EXE(pyz,
           a.scripts,
           [],
           exclude_binaries=True,
-          name='vaultfly',
+          name='cli',
           debug=False,
           bootloader_ignore_signals=False,
           strip=False,
