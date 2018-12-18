@@ -1,0 +1,7 @@
+dist
+*.vault
+*.so
+*.c
+*.pyc
+*.gz
+
