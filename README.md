@@ -1,6 +1,17 @@
 # vaultfly
 Ansible vault automation for ssh login with templating and password tokens.
 
+## What
+- vaultfly is for automating ssh login when you need to use a token
+
+## Tokens (the hard part)
+- To generate the token, you need access to the token definition file.
+- Most likely you dont have access to that. 
+- The work arround is to generate your own and use that.
+- I use 'python-vipaccess2'. It will generate a Symantec compatible token
+- pip install python-vipaccess2 or pipenv....
+
+
 
 ## Help
 
