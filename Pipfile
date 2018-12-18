@@ -12,5 +12,7 @@ pyinstaller = "*"
 [packages]
 pyyaml = "*"
 oath = "*"
+setuptools = "*"
+wheel = "*"
 
 [requires]
