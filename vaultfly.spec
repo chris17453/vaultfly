@@ -30,10 +30,3 @@ exe = EXE(pyz,
           upx=True,
           runtime_tmpdir=None,
           console=True )
-#coll = COLLECT(exe,
-#               a.binaries,
-#               a.zipfiles,
-#               a.datas,
-#               strip=False,
-#               upx=True,
-#               name='vaultfly')

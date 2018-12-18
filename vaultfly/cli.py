@@ -325,8 +325,8 @@ def cli_main():
            args.show_config is False and \
            args.show_vault is False:
             p.print_help()
-            exit(0)
-            
+            return
+
         if args.random_pass and args.build and args.init is False:
             raise Exception("You cant create a random pass without an init.")
             
