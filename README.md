@@ -121,20 +121,20 @@ bob: 4324
 
 ## how to use with ansible?
 - My example
-- i created a template called tpl.vault
+- First I created a template called tpl.vault
 ```yaml
 ansible_become: true
 ansible_become_method: su
 ansible_user: 'user'
 ansible_become_exe: 'sudo  su -'
 ```
-- I then made an inventory - > inventory.ini
+- Next then made an inventory - > inventory.ini
 ```yaml
 [test]
 test-box.com.internal
 test-box2.com.internal
 ```
-- Next I made an ansible play -> copy.yaml
+- Then I made an ansible play -> copy.yaml
 ```yaml
 ---
 - hosts: test
