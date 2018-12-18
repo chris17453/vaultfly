@@ -6,7 +6,7 @@ from distutils.extension import Extension
 
 setup(
     name='vaultfly',
-    version='1.0.14',
+    version='1.0.15',
     packages=['vaultfly'],
     include_package_data=True,
     url='https://github.com/chris17453/vaultfly/',
@@ -17,7 +17,7 @@ setup(
     author='Charles Watkins',
     author_email='charles@titandws.com',
     description='Ansible vault automation for ssh connections which may also require a token',
-    install_requires=['pyyaml', 'flextable'],
+    install_requires=['pyyaml', 'oauth'],
     classifiers=[
         'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3.7',
