@@ -119,8 +119,7 @@ bob: 4324
 ```
 
 
-## how to use with ansible?
-- My example
+## How to use with ansible?
 - First I created a template called tpl.vault
 ```yaml
 ansible_become: true
@@ -131,7 +130,7 @@ ansible_become_exe: 'sudo  su -'
 - Next then made an inventory - > inventory.ini
 ```yaml
 [test]
-test-box.com.internal
+test-box1.com.internal
 test-box2.com.internal
 ```
 - Then I made an ansible play -> copy.yaml
@@ -151,16 +150,16 @@ test-box2.com.internal
   - name: Copy stuff if this is -> test-box2.com.internal
     copy:
       src: ../code/
-      dest: /tmp/placetoputstuff
+      dest: /tmp/different_placetoputstuff
       owner: user
       group: group
     when: inventory_hostname == "test-box2.com.internal"
 ```
-- Finally I run the play everytime i want to upload some files
+- Finally I run the play everytime I want to upload some files
 ```bash
 
 #build a new vault with a token
-vaultfly -b -t -vt tpl.vault -p my-pass-file -c my-config-file
+vaultfly -b -t -vt tpl.vault -p my-pass-file -c my-config-file -v group_vars/all
 # run the play
 ansible-playbook -i inventory.ini copy.yaml
 ```
@@ -169,4 +168,4 @@ ansible-playbook -i inventory.ini copy.yaml
 - I will make updates as required giving time
 
 ## notes
-- make standalone will build no dependency executable in dist/
+- make standalone will build no dependency executable in "dist/"
