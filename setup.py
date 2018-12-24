@@ -17,7 +17,7 @@ setup(
     author='Charles Watkins',
     author_email='charles@titandws.com',
     description='Ansible vault automation for ssh connections which may also require a token',
-    install_requires=['pyyaml', 'oauth'],
+    install_requires=['pyyaml', 'oath'],
     classifiers=[
         'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3.7',
